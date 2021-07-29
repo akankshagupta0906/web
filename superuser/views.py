@@ -43,8 +43,8 @@ def logout_call(request):
 def home(request):
     sobj = Service.objects.all()
     
-    dobj = DelPlan.objects.all()
-    return render(request,'superuser.html',{'sobj':sobj,'dobj':dobj})
+    pobj = Plans.objects.all()
+    return render(request,'superuser.html',{'sobj':sobj,'pobj':pobj})
 
 def service(request):
     if request.method=="POST":
@@ -103,10 +103,6 @@ def blog(request):
         return redirect("/superuser/blog/")
     return render(request,"addblog.html")
 
-def det(request,id):
-    pobj = Plans.objects.get(id=id)
-    dobj = DelPlan.objects.filter(plan_n=pobj)
-    return render(request,"alldetails.html",{'dobj':dobj,'pobj':pobj})
 
 
 

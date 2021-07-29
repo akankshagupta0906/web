@@ -242,20 +242,17 @@ https://templatemo.com/tm-565-onix-digital
       
       <div class="row">
         <div class="owl-carousel owl-services">
-        {% for i in dobj%}
+        {% for i in pobj%}
         <div class="col-lg-12">
           <div class="item first-item">
-            <h1 style="text-transform: capitalize; font-weight: bold;">{{i.plan_n.plan_name}}</h1>
-            <span style="margin-top: 30px; font-size: 25px;">${{i.plan_n.price_mon}}/{{i.plan_n.month}}month</span>
+            <h1 style="text-transform: capitalize; font-weight: bold;">{{i.plan_name}}</h1>
+            <span style="margin-top: 30px; font-size: 25px;">${{i..price_mon}}/{{i.month}}month</span>
             <span style= "font-size: 25px;">or</span>
            
-            <span style= "font-size: 25px;">${{i.plan_n.price_year}}/{{i.plan_n.year}}year</span>
-            <ul>
-              <li style="font-size:20px; color: black;"><i class="fa fa-check" aria-hidden="true" style= "color:chartreuse;"></i> {{i.plan}}</li>
-              
-            </ul>
-            <div class="main-blue-button-hover">
-              <a href="#contact">Get Started</a>
+            <span style= "font-size: 25px;">${{i.price_year}}/{{i..year}}year</span>
+            
+            <div class="main-blue-button-hover mt-5">
+              <a href="{% url 'det' id=i.id%}">show plan</a>
             </div>
           </div>
         </div>
