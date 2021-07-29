@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input required class="six" type="file" placeholder="image" name="profile_image"><br>
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <input class="four" type="text" placeholder="firstname" name="first_name" required><br/>
+                      <i class="fa fa-user" aria-hidden="true"></i>             
+                      <input class="four" type="text" placeholder="lastname" name="last_name"required><br/>
+                      <i class="fa fa-user" aria-hidden="true"></i>            
+                      <input class="four" type="text" placeholder="username" name="username" required><br/>
+                      <i class="fa fa-lock" aria-hidden="true"></i>
+                      <input class="four" type="password" placeholder="password" name="password"  required><br/>
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                      <input class="four" type="email" placeholder="Enter Email" name="email"  required> 
+                      <i class="fa fa-bell" aria-hidden="true"></i>
+                      <input class="four" type="number" placeholder="age" name="age" required><br/>            
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      <input class="four" type="text" placeholder="address" name="address"  required><br/>
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                      <input class="four" type="text" placeholder="Mobile" name="mobile"  required><br/>
+                  
+                      <h6>Gender</h6>
+                      <i class="fa fa-male" aria-hidden="true"></i>
+                      <input class="five" type="radio" value="male" name="gender">Male
+                      <i class="fa fa-female" aria-hidden="true"></i>
+                      <input class="five" type="radio" value="female" name="gender">Female</div><br>
+
+                  </hr>
+                  <input class="btn btn-info" type="submit" value="save">
+                  <p class="text-info">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                  <div class="modal.footer">
+                    <button class="btn btn-danger align-right" data-dismiss="modal">close</button>
+                </div>
+
+        </form>
+    </header>
+</body>
+</html>

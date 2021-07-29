@@ -1,0 +1,72 @@
+{% extends 'index.html'%}
+{% block 'header'%}
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.png">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/superuser/home/" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="/superuser/service/">Services</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="/superuser/plan/">Plan</a></li>
+              <li class="scroll-to-section"><a href="/logut/">Logut</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+{% block 'about' %}
+{% endblock %}
+
+{% block 'service'%}
+{% endblock %}
+
+{% block 'pricing'%}
+{% endblock %}
+{% block 'project'%}
+{% endblock %}
+
+{% block 'contact' %}
+{% endblock %}
+
+{% block 'input'%}
+<div class="col-lg-5 align-self-center">
+    <form id="contact" action="" method="POST">
+        {%csrf_token%}
+      
+      <div class="row">
+        
+        <div class="col-lg-12">
+          <fieldset>
+            <input type="text" name="blogtitel" id="name" placeholder="Enter Blog Titel" autocomplete="on" required>
+          </fieldset>
+        </div>
+        <div class="col-lg-12">
+          <fieldset>
+            <input type="text" name="blogger" id="surname" placeholder="Blog Link" autocomplete="on" required>
+          </fieldset>
+        </div>
+        
+        <div class="col-lg-12">
+          <fieldset>
+            <button type="submit" id="form-submit" class="main-button">Add Blog</button>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}

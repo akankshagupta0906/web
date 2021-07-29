@@ -1,0 +1,579 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="{%static 'https://fonts.gstatic.com' %}">
+    <link href="{%static 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap' %}" rel="stylesheet">
+
+    <title>Web Daity</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{%static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/css/templatemo-onix-digital.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/css/owl.css' %}">
+<!--
+
+TemplateMo 565 Onix Digital
+
+https://templatemo.com/tm-565-onix-digital
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  {% block 'header'%}
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="{%static 'index.html'%}" class="logo">
+              <img src="{%static 'assets/images/web.png'%}" style="margin-left: -50px;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>  
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#about">About</a></li>
+              <li class="scroll-to-section"><a href="#pricing">Plan</a></li>
+              <li class="scroll-to-section"><a href="/allBlog/">Blogs</a></li>
+              <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" style="font-size:20px;"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"style="font-size:20px;"></i></a></li>
+              <li><a href="#"><i class="fa fa-envelope"style="font-size:20px;"></i></a></li>
+              <li><a href="https://www.instagram.com/wdwebdeity/"><i class="fa fa-instagram"style="font-size:20px;"></i></a></li>
+              
+              <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Contact Us Now</a></div></li> 
+      
+                  
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  {% endblock %}
+  <!-- ***** Header Area End ***** -->
+  {% block 'banner'%}
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="owl-carousel owl-banner">
+                <div class="item header-text">
+                  <h6>Welcome to Web Deity</h6>
+                  <h2>Build <em>your website</em> the best in <span>SEO</span>?</h2>
+                  <p>This is a professional looking HTML Bootstrap 5 website template brought to you by TemplateMo website.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#contact">Contact us 24x7</a>
+                    </div>
+                    <div class="call-button">
+                      <a href="#"><i class="fa fa-phone"></i> 7773850820, 75098004903</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item header-text">
+                  <h6>Online Marketing</h6>
+                  <h2>Get the <em>best ideas</em> for <span>your website</span></h2>
+                  <p>You are NOT allowed to redistribute this template ZIP file on any Free CSS collection websites. Contact us for more info. Thank you.</p>
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="#services">For More detiles</a>
+                    </div>
+                    <div class="call-button">
+                      <a href="#"><i class="fa fa-phone"></i> 7773850820</a>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  {% block 'service'%}
+
+  <div id="services" class="our-services section">
+    <div class="services-right-dec">
+      <img src="{%static 'assets/images/services-right-dec.png'%}" alt="">
+    </div>
+    <div class="container">
+      <div class="services-left-dec">
+        <img src="{%static 'assets/images/services-left-dec.png'%}" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>We <em>Provide</em> The Best Service With <span>Our Tools</span></h2>
+            <span>Our Services</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-services">
+            {% for i in sobj %}
+            <div class="item">
+             
+              <h4>{{i.service}}</h4>
+              <div class="icon"><img src="{{i.img.url}}" alt=""></div>
+              <a href="#"><button class="btn btn-info" style="margin-top: 30px;">more</button></a>
+              
+            </div>
+            {% endfor %}
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        {% block 'contact'%}
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>Feel free to <em>Contact</em> us via the <span>Web Disgine</span></h2>
+            
+            <div class="info">
+              <span><i class="fa fa-phone"></i> <a href="#">+91 7773850820 <br>+91 7000249136 <br>+91 8871951667 <br>+91 7389414403</a></span>
+              <span><i class="fa fa-envelope"></i><a href="#" style="font-size:20px; margin-top: 10px;">webdeity06@gmail.com</a></span>
+             
+            </div>
+            
+          </div>
+        </div>
+        {% endblock %}
+        {% block 'input'%}
+        
+        <div class="col-lg-5 align-self-center">
+          <form id="contact" action="" method="get">
+            
+            <div class="row">
+              
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="website" id="website" placeholder="Your Website URL" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-button">Submit Request</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+        {% endblock %}
+      </div>
+    </div>
+    <div class="contact-dec">
+      <img src="{%static 'assets/images/contact-dec.png' %}" alt="">
+    </div>
+    <div class="contact-left-dec">
+      <img src="{%static 'assets/images/contact-left-dec.png' %}" alt="">
+    </div>
+  </div>
+  
+  
+
+  {% block 'pricing'%}
+  <div id="pricing" class="pricing-tables">
+    <div class="tables-left-dec">
+      <img src="{%static 'assets/images/tables-left-dec.png' %}" alt="">
+    </div>
+    <div class="tables-right-dec">
+      <img src="{%static 'assets/images/tables-right-dec.png' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Select a suitable <em>plan</em> for your next <span>projects</span></h2>
+            <span>Our Plans</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="owl-carousel owl-services">
+        {% for i in pobjs%}
+        <div class="col-lg-12">
+          <div class="item first-item">
+            <h1 style="text-transform: capitalize; font-weight: bold;">{{i.plan_name}}</h1>
+            <span style="margin-top: 30px; font-size: 25px;">${{i.price_mon}}/{{i.month}}month</span>
+            <span style= "font-size: 25px;">or</span>
+           
+            <span style= "font-size: 25px;">${{i.price_year}}/{{i.year}}year</span>
+            
+            <div class="main-blue-button-hover mt-5">
+              <a href="{% url 'det' id=i.id%}">show plan</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+        <div class="col-lg-12">
+          <div class="item third-item mt-5">
+            <h4>For See All Plans</h4>
+            <span>click</span>
+            <span>HAER</span>
+            
+            <div class="main-blue-button-hover">
+              <a href="/all_plan/">More</a>
+            </div>
+  
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  
+
+ {% block 'project'%}
+  <div id="portfolio" class="our-portfolio section">
+    <div class="portfolio-left-dec">
+      <img src="{%static 'assets/images/portfolio-left-dec.png' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Our Recent <em>Projects</em> &amp; Case Studies <span>for Clients</span></h2>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-portfolio">
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-01.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="{%static 'https://templatemo.com/tm-564-plot-listing' %}" target="_parent"><h4>First Project</h4></a>
+                    <span>Plot Listing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-02.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="https://www.narmadahealthgroup.com/"><h4>Project Two</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-03.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a rel="sponsored" href="{%static 'https://templatemo.com/tm-562-space-dynamic' %}" target="_parent"><h4>Third Project</h4></a>
+                    <span>Space Dynamic SEO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-04.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Project Four</h4></a>
+                    <span>Website Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-01.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Fifth Project</h4></a>
+                    <span>Digital Assets</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-02.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Sixth Project</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-03.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>7th Project</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-04.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>8th Project</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-01.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>9th Project</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{%static 'assets/images/portfolio-02.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Project Ten</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/portfolio-03.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>Project Eleven</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="assets/images/portfolio-04.jpg" alt="">
+                <div class="hover-effect">
+                  <div class="inner-content">
+                    <a href="#"><h4>12th Project</h4></a>
+                    <span>SEO &amp; Marketing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+{% block 'about'%}
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image">
+            <img src="{%static 'assets/images/about-left-image.png' %}" alt="Two Girls working together">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <u><h1 class="text-warning">Who We Are</h1></u>
+            <p><h2 style="color:green;">WEBDEITY</h2>is the software development company.Combaining our solid business domain experience, technology experties,profind knowladge of leteste industry
+              trends and qualitydivine delivery modal, we deliver solutions that go beyond meeting costumer expectations.
+              <p>WEBDEITY is still a fresh software dvelopment company in the market .It has already gain the trust of several reginal Clients
+              to deliver various innovative solutions in area of IT consultancy,web development integration, and mobile developnet.Clients choice of WEBDEITY come through the belief in WEBDEITY team solid
+              IT knowledge and work methocology, and ssatisfaction on with delivered solution.</P>
+            </p>
+          </div>
+          <div class="col-lg-12">
+          <div class="section-heading">
+            <u><h1 class="text-warning">What We Do</h1></u>
+            <p><h2 style="color:green;">WEBDEITY</h2> provide comprehensive and integrated IT services that include strategic,consulting, software development, SEO, mobile view
+            at ons development as well as the development and implementation of world class domain.Our expertise guarentees qualties,
+            competence and rapid execution of any project ranging from small size portais to complex software development and custom mobility solutions. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+  
+  
+  {% block 'footer'%}
+  <div class="footer-dec mt-5">
+    <img src="{%static 'assets/images/footer-dec.png' %}" alt="">
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="about footer-item">
+            <div class="logo">
+              <a href="#"><img src="{%static 'assets/images/web.png' %}" alt="Onix Digital TemplateMo"></a>
+            </div>
+            <a href="#">webdeity06@gmail.com</a>
+            <ul>
+              <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-envelope "></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="services footer-item">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">SEO Development</a></li>
+              <li><a href="#">Business Growth</a></li>
+              <li><a href="#">Social Media Managment</a></li>
+              <li><a href="#">Website Optimization</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="community footer-item">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Business Ideas</a></li>
+              <li><a href="#">Website Checkup</a></li>
+              <li><a href="#">Page Speed Test</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-3">
+          <div class="subscribe-newsletters footer-item">
+            <h4>Subscribe Newsletters</h4>
+            <p>Get our latest news and ideas to your inbox</p>
+            <form action="#" method="get">
+              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+              <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright">
+            <p>Copyright © 2021 Onix Digital Co., Ltd. All Rights Reserved. 
+            <br>
+            Designed by <a rel="nofollow" href="{%static 'https://templatemo.com' %}" title="free CSS templates">TemplateMo</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  {% endblock %}
+
+
+  <!-- Scripts -->
+  <script src="{%static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{%static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{%static 'assets/js/animation.js' %}"></script>
+  <script src="{%static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{%static 'assets/js/custom.js' %}"></script>
+
+  <script>
+  // Acc
+    $(document).on("click", ".naccs .menu div", function() {
+      var numberIndex = $(this).index();
+
+      if (!$(this).is("active")) {
+          $(".naccs .menu div").removeClass("active");
+          $(".naccs ul li").removeClass("active");
+
+          $(this).addClass("active");
+          $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+          var listItemHeight = $(".naccs ul")
+            .find("li:eq(" + numberIndex + ")")
+            .innerHeight();
+          $(".naccs ul").height(listItemHeight + "px");
+        }
+    });
+  </script>
+</body>
+</html>
