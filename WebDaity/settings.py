@@ -29,7 +29,9 @@ SECRET_KEY = '_4t9+yn!qya!x@szr-k#o2e&$1#x-jsv24agy*(3#%i$jf(3j5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'webdeity.herokuapp,com'
+]
 
 
 # Application definition
