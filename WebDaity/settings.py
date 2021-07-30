@@ -27,7 +27,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 SECRET_KEY = '_4t9+yn!qya!x@szr-k#o2e&$1#x-jsv24agy*(3#%i$jf(3j5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','webdaity.herokuapp.com']
     
@@ -132,6 +132,6 @@ USE_TZ = True
 MEDIA_URL='/media/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[STATIC_DIR]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
